@@ -1,0 +1,49 @@
+body {
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.3rem;
+    min-height: 100vh;
+}
+
+.header {
+    text-align: center;
+    background-color: bisque;
+    font-size: 1.4rem;
+}
+
+.main-container {
+display: flex;
+justify-content: center;
+margin-top: 1em;
+}
+
+.btnN {
+    font-size: large;
+    border-radius: 15px;
+    border: none;
+    padding: 10px;
+}
+
+img {
+    max-width: 22px;
+}
+
+a:hover {
+font-weight: 600;
+color: brown;
+}
+
+.footer {
+    display: flex;
+    gap: 5px;
+    background-color: beige;
+    margin-top: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
