@@ -12,8 +12,21 @@
         <h2 class="title">Library</h2>
     </div>
     <div class="main-container">
-        <button class="btnN">+ New book</button>
-        <div class="card-container">
+        <div class="buttonContainer">
+        <button id="btnBook">Add new book</button>
+        <dialog id="mainDialog">
+            <h2>Add new book</h2>
+            <form action="">
+                <input type="text" name="Title" id="title-form" value="" placeholder="Title">
+                <input type="text" name="Author" id="author-form" placeholder="Author">
+                <input type="number" name="Pages" id="pages-form" placeholder="Pages" >
+                <div class="read-it"><label for="read-checkbox">Have you read it?</label> <input type="checkbox" id="read-checkbox" /></div>
+                <button type="submit" id="btnForm" >Add</button>
+            </form>
+        </dialog>
+    </div>
+        <div class="card-container" id="card-container">
+            
 
         </div>
     </div>
@@ -24,3 +37,4 @@
     </div>
 </body>
 </html>
+
