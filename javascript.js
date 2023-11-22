@@ -51,6 +51,16 @@ window.onload = function () {
         readForm.checked = false;
 
     });
+
+    function ReadButtonColor() {
+        if (book.read) {
+            book.read = false;
+            readButton.style.backgroundColor = "green"; // Assuming the default color is green
+        } else {
+            book.read = true;
+            readButton.style.backgroundColor = "red";
+        }
+    }
     
     function createElement(book, index) {
         const domElement = document.createElement("div");
@@ -74,15 +84,20 @@ window.onload = function () {
         const readButton = document.createElement("button");
         readButton.textContent = "Read";
         readButton.classList.add("buttonRead");
+        if (book.read) {
+            readButton.style.backgroundColor = "green"; 
+        } else {
+            readButton.style.backgroundColor = "red";
+        }
+        
         readButton.addEventListener("click", () => {
             if (book.read) {
                 book.read = false;
-                readButton.style.backgroundColor = "green"; // Assuming the default color is green
+                readButton.style.backgroundColor = "red"; 
             } else {
                 book.read = true;
-                readButton.style.backgroundColor = "red";
+                readButton.style.backgroundColor = "green";
             }
-        
         });
     
         const removeButton = document.createElement("button");

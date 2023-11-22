@@ -1,15 +1,19 @@
 body {
     margin: 0px;
+    padding: 0px;
     display: flex;
     flex-direction: column;
     font-size: 1.3rem;
     min-height: 100vh;
+    background-color: rgba(240,238,241,255);
 }
 
 .header {
     text-align: center;
-    background-color: bisque;
+    background-color: white;
     font-size: 1.4rem;
+   box-shadow: 0 0 3px 0;
+    
 }
 
 .main-container {
@@ -18,6 +22,7 @@ flex-direction: column;
 align-items: center;
 justify-content: center;
 margin-top: 1em;
+gap: 30px;
 }
 
 #btnBook, #btnForm {
@@ -25,6 +30,7 @@ margin-top: 1em;
     border-radius: 15px;
     border: none;
     padding: 10px;
+    box-shadow: 0 0 1px 0;
 }
 
 img {
@@ -33,7 +39,7 @@ img {
 
 a:hover {
 font-weight: 600;
-color: brown;
+color: #597ba8;
 }
 
 form {
@@ -53,10 +59,10 @@ input {
 .footer {
     display: flex;
     gap: 5px;
-    background-color: beige;
     margin-top: auto;
     align-items: center;
     justify-content: center;
+    
 }
 
 a {
@@ -73,20 +79,30 @@ a {
     gap: 20px;
     font-size: larger;
     padding: 20px;
-    background-color: chartreuse;
+    background-color:  white;
+    border-radius: 10px;
+    box-shadow: 0 0 2px 0;
 }
 
 .card-container {
-    display: flex;
-    gap: 10px;
-    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 300px);
+    gap: 30px;
+
 }
 
 .buttonRead, .buttonRemove {
     width: 200px;
     font-size: 1.3rem;
-    border-radius: 15px;
+    border-radius: 10px;
     border: none;
     padding: 10px;
+    box-shadow: 0 0 1px 0;
 
+}
+
+@media all and (max-width: 480px) {
+    .card-container {
+        grid-template-columns: 300px;
+    }
 }
